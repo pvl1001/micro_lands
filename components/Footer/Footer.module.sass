@@ -1,0 +1,104 @@
+._
+   display: flex
+   color: #fff
+   font-size: 12px
+   line-height: 14px
+   padding-top: 46px
+   padding-bottom: 45px
+
+   p
+      font-weight: 400
+
+
+.copyright
+   margin-right: 25px
+   min-width: 185px
+   display: flex
+
+   &__age
+      width: 37px
+      height: 37px
+      border-radius: 50%
+      background-color: #FFFFFF
+      color: var(--mf-green)
+      font-weight: 400
+      line-height: 37px
+      text-align: center
+      flex-shrink: 0
+      margin-right: 12px
+      display: inline-block
+
+
+   &__text
+      display: flex
+      align-items: center
+      height: 37px
+      line-height: 14px
+
+
+.transfer
+   margin-right: 18px
+   max-width: 531px
+
+
+.policy
+   margin-right: 70px
+   max-width: 405px
+
+   a
+      color: #ffffff
+      text-decoration: underline
+
+
+.speedtest
+   flex-shrink: 0
+   margin-left: auto
+
+   svg
+      width: 100%
+
+   path
+      fill: #ffffff
+
+
+@media (max-width: 1024px)
+
+   ._
+      flex-wrap: wrap
+      padding-top: 48px
+      padding-bottom: 57px
+      position: relative
+
+      > p
+         width: 100%
+         margin-right: 0
+         max-width: none
+
+
+   .copyright
+      order: 0
+      width: 50%
+      min-width: 0
+      margin-right: 0
+
+
+   .speedtest
+      order: 1
+      width: 109px
+
+      img
+         width: 100%
+
+
+   .transfer
+      order: 2
+      margin: 30px 0 20px
+
+
+   .policy
+      order: 3
+
+
+@media (max-width: 767px)
+   ._
+      padding-bottom: 120px

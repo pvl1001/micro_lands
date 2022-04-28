@@ -1,0 +1,95 @@
+.container
+   flex: 0 0 64px
+   background-color: #fff
+   display: flex
+   align-items: center
+   padding: 0 40px
+   border-radius: 0 0 24px 24px
+   box-shadow: 0 0 16px rgba(0, 0, 0, 0.2)
+
+   @media (max-width: 1279px)
+      padding-left: 32px
+      padding-right: 24px
+
+   @media (max-width: 1023px)
+      padding: 0 24px
+
+   @media (max-width: 767px)
+      padding: 0 16px
+
+
+.logo a
+   display: block
+   width: 178px
+   height: 31px
+   background: url('../../public/svg/mf_logo_full.svg') center / contain no-repeat
+
+
+.phone
+   margin-left: auto
+   margin-right: 35px
+
+   a
+      font-size: 18px
+      font-weight: 500
+      color: #333
+
+      &:hover
+         text-decoration: none
+
+
+.city
+   display: flex
+   align-items: center
+   height: 100%
+   padding-left: 35px
+   border-left: 1px solid #EDEDED
+
+   span
+      font-size: 12px
+      font-weight: 500
+      line-height: 34px
+      color: #7F7F7F
+      position: relative
+      cursor: pointer
+
+      &:after
+         content: url('../../public/svg/location.svg')
+         display: inline-block
+         width: 8px
+         margin-left: 8px
+
+
+@media (max-width: 1614px)
+   .logo a
+      width: 136px
+
+
+@media (max-width: 1024px)
+   .phone
+      margin-right: 20px
+
+      a
+         display: block
+         font-size: 0
+         height: 32px
+         width: 32px
+         background: url('../../public/svg/tel.svg') center / contain no-repeat
+
+   .city
+      padding-left: 0
+      border-left: none
+
+      span
+         font-size: 0
+         height: 32px
+         width: 24px
+         background: url('../../public/svg/geo.svg') center / contain no-repeat
+
+         &:after
+            display: none
+
+
+@media (max-width: 767px)
+   .container
+      margin: 0 -16px
