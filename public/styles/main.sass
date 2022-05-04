@@ -185,7 +185,6 @@ p
    color: $mf-blue
 
 
-
 .switch
    position: relative
    display: inline-block
@@ -304,3 +303,49 @@ p
 
    @media (max-width: $mobile)
       padding: 24px
+
+
+.tippy-box[data-theme~=light]
+   border-radius: 0
+   font-size: 15px
+   line-height: 24px
+   font-weight: 400
+   text-align: center
+   box-shadow: 0 2px 9px 0 #00000026
+
+
+   .tippy-content
+      padding: 28px
+
+
+   @media (max-width: 1150px)
+      white-space: normal
+
+
+   @media (max-width: $tablet)
+      border-radius: 12px
+      box-shadow: none
+      background-color: #E1FAFF
+
+      &[data-placement^=top]>.tippy-arrow:before
+         border-top-color: #E1FAFF !important
+
+      &[data-placement^=bottom]>.tippy-arrow:before
+         border-bottom-color: #E1FAFF !important
+
+      &[data-placement^=left]>.tippy-arrow:before
+         border-left-color: #E1FAFF !important
+
+      &[data-placement^=right]>.tippy-arrow:before
+         border-right-color: #E1FAFF !important
+
+
+   @media (max-width: $mobile)
+      max-width: 264px !important
+
+      .tippy-content
+         padding: 12px
+
+      > .tippy-arrow:before
+         transform: scale(1.5)
+

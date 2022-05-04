@@ -1,4 +1,6 @@
 import s from './Terms.module.sass'
+import Tippy from "@tippyjs/react";
+import { tippyAttrs } from "../../plugins_config";
 
 
 function Terms( { title, options } ) {
@@ -13,7 +15,12 @@ function Terms( { title, options } ) {
                   <div className={ s.term__icon }>{ icon }</div>
                   <p className={ s.term__title }>{ title }</p>
                   <p className={ s.term__description }>{ description }</p>
-                  { link && <span className={ s.link }>Подробнее</span> }
+                  { link &&   <Tippy
+                     { ...tippyAttrs }
+                     maxWidth={ 460 }
+                     content={ link }>
+                     <span className={ s.link }>Подробнее</span>
+                  </Tippy> }
                </li>
             ) }
          </ul>
