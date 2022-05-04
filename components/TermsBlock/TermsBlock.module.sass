@@ -1,0 +1,39 @@
+@import 'public/styles/variable'
+
+._
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-template-rows: 1fr 1fr
+   grid-gap: 8px
+
+
+.start
+   background-color: #1D1F23
+   color: #fff
+
+
+.mftv
+   background-color: #fff
+
+
+.title
+   margin-bottom: 16px
+
+
+.icon
+   margin-left: -8px
+
+
+@media (max-width: $mobile)
+   .start, .mftv
+      grid-column: 1/3
+
+   .icon
+      margin-left: initial
+
+   ._
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+
+      > div:last-child
+         order: -1

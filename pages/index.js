@@ -4,14 +4,66 @@ import Footer from "../components/Footer/Footer";
 import ModalCity from "../components/_modals/City/ModalCity";
 // import ModalOrder from "../components/_modals/Order/ModalOrder";
 import Header from "../components/Header/Header";
-import Terms from "../components/Terms/Terms";
 import Connect from "../components/Connect/Connect";
 import OrderBtn from "../components/OrderBtn/OrderBtn";
 import { useEffect, useState } from "react";
 import OrderThx from "../components/_modals/OrderThx/OrderThx";
+import TermsBlock from "../components/TermsBlock/TermsBlock";
+import WifiIcon from "../public/svg/wifi.svg";
+import InfinityIcon from "../public/svg/infinity.svg";
+import PhoneIcon from "../public/svg/phone.svg";
+import MessageIcon from "../public/svg/message.svg";
+import RouterIcon from "../public/svg/router.svg";
+import Terms from "../components/Terms/Terms";
 
 
 export default function IndexPage() {
+
+   const homeWebOptions = [
+      {
+         icon: <WifiIcon/>,
+         title: 'до 100 Мбит/с',
+         description: 'Скорость'
+      },
+      {
+         icon: <InfinityIcon/>,
+         title: 'Безлимитно',
+         description: 'Трафик'
+      }
+   ]
+
+   const mobileOptions = [
+      {
+         icon: <PhoneIcon/>,
+         title: '1300 минут',
+         description: 'Звонки на все номера России',
+         link: null
+      },
+      {
+         icon: <WifiIcon/>,
+         title: '30 ГБ',
+         description: 'Мобильный интернет',
+         link: null
+      },
+      {
+         icon: <MessageIcon/>,
+         title: '50 сообщений',
+         description: 'SMS на номера России',
+         link: null
+      },
+      {
+         icon: <RouterIcon/>,
+         title: 'Бесплатно',
+         description: 'Раздача интернета',
+         link: ' '
+      },
+      {
+         icon: <InfinityIcon/>,
+         title: 'Безлимитно',
+         description: 'Мессенджеры и звонки на номера МегаФона доступны при любом балансе',
+         link: ' '
+      }
+   ]
 
    const [ isHidden, setIsHidden ] = useState( true )
 
@@ -35,12 +87,13 @@ export default function IndexPage() {
             <div className="content">
                <Header/>
                <main className="main">
-                  <Terms/>
+                  <OrderBtn setIsHidden={ setIsHidden }/>
                   <Connect
                      isHidden={ isHidden }
                      setIsHidden={ setIsHidden }
                   />
-                  <OrderBtn setIsHidden={ setIsHidden }/>
+                  <TermsBlock options={ homeWebOptions }/>
+                  <Terms title="Мобильная связь" options={ mobileOptions }/>
                </main>
             </div>
 

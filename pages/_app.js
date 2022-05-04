@@ -7,7 +7,6 @@ import 'swiper/css/navigation'
 
 import '../public/fonts/fonts.css'
 import '../public/styles/null.sass'
-import '../public/styles/colors.css'
 import '../public/styles/main.sass'
 
 

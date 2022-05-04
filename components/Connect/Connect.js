@@ -16,17 +16,17 @@ function Connect( { isHidden, setIsHidden, showModal } ) {
    } )
 
    const isShow = !isHidden
-      ? `${ s._ } d-block`
-      : s._
+      ? `${ s.container } d-block`
+      : s.container
 
-   function submitHandler(actions) {
+   function submitHandler( actions ) {
       showModal( { modal: 'orderThx', bool: true } )
       actions.resetForm()
    }
 
 
    return (
-      <div>
+      <div className={ s._ }>
          <div
             hidden={ isHidden }
             className={ s.backdrop }
@@ -54,9 +54,9 @@ function Connect( { isHidden, setIsHidden, showModal } ) {
                } }
                validateOnBlur
                validationSchema={ validationSchema }
-               onSubmit={ (values, actions) => {
-                  submitHandler(actions)
-               }  }
+               onSubmit={ ( values, actions ) => {
+                  submitHandler( actions )
+               } }
             >
                { ( { values, errors, touched, dirty, handleChange, handleBlur, handleSubmit } ) =>
                   <form className={ s.form } onSubmit={ handleSubmit }>

@@ -1,9 +1,11 @@
+@import '../../public/styles/variable'
+
 ._
    display: none
    position: fixed
    bottom: 32px
-   left: 16px
-   right: 16px
+   left: $wrapperTablet
+   right: $wrapperTablet
    z-index: 1
    box-shadow: 0 12px 20px rgba(115, 25, 130, 0.25)
    cursor: pointer
@@ -12,5 +14,10 @@
    path
       fill: #FFFFFF
 
-   @media (max-width: 767px)
+   @media (max-width: $tablet)
       display: block
+
+
+   @media (max-width: $mobile)
+      left: $wrapperMobile
+      right: $wrapperMobile
