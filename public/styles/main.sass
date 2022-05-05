@@ -244,20 +244,20 @@ p
    font-weight: 400
    text-align: center
    box-shadow: 0 2px 9px 0 #00000026
-
-
-   .tippy-content
-      padding: 28px
-
+   padding: 28px
 
    @media (max-width: 1150px)
       white-space: normal
 
 
    @media (max-width: $tablet)
+      text-align: initial
       border-radius: 12px
       box-shadow: none
       background-color: #E1FAFF
+
+      .tippy-content
+         padding: 0 60px 0 0
 
       &[data-placement^=top]>.tippy-arrow:before
          border-top-color: #E1FAFF !important
@@ -274,9 +274,7 @@ p
 
    @media (max-width: $mobile)
       max-width: 264px !important
-
-      .tippy-content
-         padding: 12px
+      padding: 12px
 
       > .tippy-arrow:before
          transform: scale(1.5)
