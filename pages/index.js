@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import ModalCity from "../components/_modals/City/ModalCity";
-// import ModalOrder from "../components/_modals/Order/ModalOrder";
 import Header from "../components/Header/Header";
 import Connect from "../components/Connect/Connect";
 import OrderBtn from "../components/OrderBtn/OrderBtn";
@@ -66,9 +65,8 @@ export default function IndexPage() {
 
    useEffect( () => {
       isHidden
-         ? document.body.style.overflow = ''
-         : document.body.style.overflow = 'hidden'
-
+         ? document.body.classList.remove('modal-open')
+         : document.body.classList.add('modal-open')
    }, [ isHidden ] )
 
 
@@ -99,7 +97,6 @@ export default function IndexPage() {
 
 
          <ModalCity/>
-         {/*<ModalOrder/>*/}
          <OrderThx setIsHidden={ setIsHidden }/>
       </>
    )
