@@ -38,6 +38,7 @@ a.btn,
    border-radius: 30px
    font-size: 15px
    font-weight: 500
+   line-height: normal
    transition: 0s
 
    &:focus
@@ -137,6 +138,10 @@ a.btn,
          order: 1
 
 
+.modal-open
+   overflow: hidden
+
+
 h1
    font-size: 32px
    line-height: 40px
@@ -171,79 +176,6 @@ h3
 
 p
    font-weight: 500
-
-
-.text-green
-   color: $mf-green
-
-
-.text-fiolet
-   color: $mf-fiolet
-
-
-.text-blue
-   color: $mf-blue
-
-
-.switch
-   position: relative
-   display: inline-block
-   box-sizing: border-box
-   flex-shrink: 0
-   height: 28px
-   width: 48px
-
-   & input:checked + span:before
-      left: calc(100% - 26px + 1px)
-
-
-   input
-      display: none
-
-
-   span
-      position: absolute
-      cursor: pointer
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      background-color: #fff
-      transition: .3s
-      border: 1px solid #33333327
-
-
-   span:before
-      content: ''
-      position: absolute
-      left: -1px
-      background-color: #fff
-      transition: .3s
-      border: 1px solid #33333327
-      box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .05), 0 3px 3px 0 rgba(0, 0, 0, .05)
-      height: 26px
-      width: 26px
-      top: calc(50% - 26px / 2)
-
-
-   input:checked + span
-      background-color: $mf-green
-
-
-   input:focus + span
-      box-shadow: 0 0 1px #19181F
-
-
-   input:checked + span:before
-      left: calc(100% - 26px + 1px)
-
-
-   span.round
-      border-radius: 34px
-
-
-   span.round:before
-      border-radius: 50%
 
 
 .wrapper

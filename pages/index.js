@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import ModalCity from "../components/_modals/City/ModalCity";
-// import ModalOrder from "../components/_modals/Order/ModalOrder";
 import Header from "../components/Header/Header";
 import Connect from "../components/Connect/Connect";
 import OrderBtn from "../components/OrderBtn/OrderBtn";
@@ -37,31 +36,28 @@ export default function IndexPage() {
          icon: <PhoneIcon/>,
          title: '1300 минут',
          description: 'Звонки на все номера России',
-         link: null
       },
       {
          icon: <WifiIcon/>,
          title: '30 ГБ',
          description: 'Мобильный интернет',
-         link: null
       },
       {
          icon: <MessageIcon/>,
          title: '50 сообщений',
          description: 'SMS на номера России',
-         link: null
       },
       {
          icon: <RouterIcon/>,
          title: 'Бесплатно',
          description: 'Раздача интернета',
-         link: 'Весь объём интернета по тарифу доступен для раздачи через Wi‑Fi или USB без дополнительной платы! При использовании торрент‑ресурсов скорость снижается до 128 Кбит/с.'
+         tippy: 'Весь объём интернета по тарифу доступен для раздачи через Wi‑Fi или USB без дополнительной платы! При использовании торрент‑ресурсов скорость снижается до 128 Кбит/с.'
       },
       {
          icon: <InfinityIcon/>,
          title: 'Безлимитно',
          description: 'Мессенджеры и звонки на номера МегаФона доступны при любом балансе',
-         link: 'Даже при отрицательном балансе можно написать сообщение и звонить на номера МегаФона до ближайшей даты списания абонентской платы. Эти приложения не расходуют интернет по тарифу: WhatsApp, Viber, Telegram, eMotion, ТамТам, Snapchat.'
+         tippy: 'Даже при отрицательном балансе можно написать сообщение и звонить на номера МегаФона до ближайшей даты списания абонентской платы. Эти приложения не расходуют интернет по тарифу: WhatsApp, Viber, Telegram, eMotion, ТамТам, Snapchat.'
       }
    ]
 
@@ -69,9 +65,8 @@ export default function IndexPage() {
 
    useEffect( () => {
       isHidden
-         ? document.body.style.overflow = ''
-         : document.body.style.overflow = 'hidden'
-
+         ? document.body.classList.remove('modal-open')
+         : document.body.classList.add('modal-open')
    }, [ isHidden ] )
 
 
@@ -102,7 +97,6 @@ export default function IndexPage() {
 
 
          <ModalCity/>
-         {/*<ModalOrder/>*/}
          <OrderThx setIsHidden={ setIsHidden }/>
       </>
    )
