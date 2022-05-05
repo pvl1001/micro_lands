@@ -1,10 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'tippy.js/dist/tippy.css'
-import 'tippy.js/themes/light.css'
-import "swiper/css"
-import "swiper/css/pagination"
-import 'swiper/css/navigation'
-
 import '../public/fonts/fonts.css'
 import '../public/styles/null.sass'
 import '../public/styles/colors.css'
