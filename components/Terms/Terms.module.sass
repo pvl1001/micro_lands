@@ -15,9 +15,10 @@
    max-width: 344px
    margin-top: 16px
 
-   &:last-child
-      width: auto
+   &:nth-last-child(-n+2)
       max-width: none
+      @media (max-width: $laptop)
+         width: 100%
 
    &__icon
       width: 32px
