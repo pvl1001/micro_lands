@@ -7,7 +7,7 @@ function OrderBtn( { setIsHidden } ) {
       <button
          className={ `${ s._ } btn btn-fiolet` }
          onClick={ () => setIsHidden( false ) }>
-         Подключить <ArrowIcon/>
+         Подключить
       </button>
    )
 }
