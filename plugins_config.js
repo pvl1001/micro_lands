@@ -1,7 +1,7 @@
 export const tippyAttrs = {
    interactive: true,
-   placement: 'auto',
-   maxWidth: 225,
+   placement: typeof window !== 'undefined' && window.innerWidth < 768 ? 'top-start' : 'auto',
+   maxWidth: typeof window !== 'undefined' && window.innerWidth < 768 ? 'calc(100vw - 56px)' : 460,
    allowHTML: true,
    theme: 'light',
    hideOnClick: false,
