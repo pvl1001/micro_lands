@@ -1,3 +1,5 @@
+@import '/public/styles/variable'
+
 html
    display: table
 
@@ -9,7 +11,7 @@ body
    letter-spacing: .5px
    background: linear-gradient(81.05deg, #01873F -35.54%, #00B956 61.15%, #14CD6A 110.63%)
 
-   @media (max-width: 767px)
+   @media (max-width: $mobile)
       letter-spacing: normal
 
 
@@ -20,12 +22,12 @@ body
 a,
 a:visited,
 .link
-   color: var(--mf-blue)
+   color: $mf-blue
    cursor: pointer
 
    @media (hover: hover)
       &:hover
-         color: var(--mf-blue)
+         color: $mf-blue
          text-decoration: underline
 
 
@@ -44,7 +46,7 @@ a.btn,
 
 
 .btn.btn-fiolet
-   background-color: var(--mf-fiolet)
+   background-color: $mf-fiolet
    color: #FFFFFF
 
    @media (hover: hover)
@@ -53,7 +55,7 @@ a.btn,
 
 
 .btn.btn-green
-   background-color: var(--mf-green)
+   background-color: $mf-green
    color: #FFFFFF
 
    @media (hover: hover)
@@ -69,7 +71,7 @@ a.btn,
    @media (hover: hover)
       &:hover
          color: #FFFFFF
-         background-color: var(--mf-green-light)
+         background-color: $mf-green-light
 
 
 .modal-dialog
@@ -123,7 +125,7 @@ a.btn,
          font-weight: 400
 
 
-   @media (max-width: 767px)
+   @media (max-width: $mobile)
       order: 1
       flex-wrap: wrap
 
@@ -145,17 +147,17 @@ h1
    line-height: 40px
    font-weight: 600
 
-   @media (max-width: 1279px)
+   @media (max-width: $laptop)
       font-size: 28px
       line-height: 36px
 
 
-   @media (max-width: 1023px)
+   @media (max-width: $tablet)
       font-size: 26px
       line-height: 32px
 
 
-   @media (max-width: 767px)
+   @media (max-width: $mobile)
       font-size: 22px
       line-height: 28px
 
@@ -218,7 +220,7 @@ p
 
 
    input:checked + span
-      background-color: var(--mf-green)
+      background-color: $mf-green
 
 
    input:focus + span
@@ -238,24 +240,24 @@ p
 
 
 .wrapper
-   max-width: 1440px
-   padding: 0 80px
+   max-width: $wrapperMaxWidth
+   padding: 0 $wrapperDesktop
    margin: 0 auto
    box-sizing: content-box
    display: flex
    flex-direction: column
 
 
-   @media (max-width: 1279px)
-      padding: 0 64px
+   @media (max-width: $laptop)
+      padding: 0 $wrapperLaptop
 
 
-   @media (max-width: 1023px)
-      padding: 0 48px
+   @media (max-width: $tablet)
+      padding: 0 $wrapperTablet
 
 
-   @media (max-width: 767px)
-      padding: 0 16px
+   @media (max-width: $mobile)
+      padding: 0 $wrapperMobile
 
 
 .modal-backdrop
@@ -265,7 +267,7 @@ p
 .main
    display: flex
 
-   @media (max-width: 767px)
+   @media (max-width: $mobile)
       display: block
 
 
