@@ -1,4 +1,5 @@
 import s from './TermsBlock.module.sass'
+import termsSmallStyle from '../Terms/TermsSmall.module.sass'
 import Terms from "../Terms/Terms";
 import StartIcon from '../../public/svg/start.svg'
 import MftvIcon from '../../public/svg/mftv_round.svg'
@@ -15,7 +16,7 @@ function TermsBlock( { options } ) {
             <h2 className={ `${ s.title } round-container__title` }>Кино <br/>на Мегафон ТВ</h2>
             <MftvIcon className={ s.icon }/>
          </div>
-         <Terms title="Домашний интернет" options={ options }/>
+         <Terms title="Домашний интернет" propsStyle={ termsSmallStyle } options={ options }/>
       </div>
    )
 }

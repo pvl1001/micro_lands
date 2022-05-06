@@ -14,6 +14,7 @@ import PhoneIcon from "../public/svg/phone.svg";
 import MessageIcon from "../public/svg/message.svg";
 import RouterIcon from "../public/svg/router.svg";
 import Terms from "../components/Terms/Terms";
+import termsBigStyle from '../components/Terms/TermsBig.module.sass'
 
 
 export default function IndexPage() {
@@ -65,8 +66,8 @@ export default function IndexPage() {
 
    useEffect( () => {
       isHidden
-         ? document.body.classList.remove('modal-open')
-         : document.body.classList.add('modal-open')
+         ? document.body.classList.remove( 'modal-open' )
+         : document.body.classList.add( 'modal-open' )
    }, [ isHidden ] )
 
 
@@ -88,7 +89,7 @@ export default function IndexPage() {
                      setIsHidden={ setIsHidden }
                   />
                   <TermsBlock options={ homeWebOptions }/>
-                  <Terms title="Мобильная связь" options={ mobileOptions }/>
+                  <Terms title="Мобильная связь" propsStyle={ termsBigStyle } options={ mobileOptions }/>
                </main>
             </div>
 
