@@ -1,11 +1,11 @@
-import s from './Terms.module.sass'
+import s from './Terms.module.sass';
 import Tippy from "@tippyjs/react";
 import { tippyAttrs } from "../../plugins_config";
 import CloseIcon from '../../public/svg/close.svg'
 import { useState } from "react";
 
 
-function Terms( { title, options } ) {
+function Terms( { title, options, propsStyle } ) {
 
    const [ tippyVisible, setTippyVisible ] = useState( [] )
 
@@ -31,7 +31,7 @@ function Terms( { title, options } ) {
 
          <ul className={ s.terms }>
             { options.map( ( { icon, title, description, tooltip }, i ) =>
-               <li key={ description } className={ s.term }>
+               <li key={ description } className={ `${ s.term } ${ propsStyle.term }` }>
                   <div className={ s.term__icon }>{ icon }</div>
                   <p className={ s.term__title }>{ title }</p>
                   <p className={ s.term__description }>{ description }</p>

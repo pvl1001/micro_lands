@@ -1,4 +1,5 @@
 import s from './TermsBlock.module.sass'
+import termsSmallStyle from '../Terms/TermsSmall.module.sass'
 import Terms from "../Terms/Terms";
 import MftvIcon from '../../public/svg/mftv_round.svg'
 
@@ -16,7 +17,7 @@ function TermsBlock( { options } ) {
                </div>
             </div>
          </div>
-         <Terms title="Домашний интернет" options={ options }/>
+         <Terms title="Домашний интернет" propsStyle={ termsSmallStyle } options={ options }/>
       </div>
    )
 }
