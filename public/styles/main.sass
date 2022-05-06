@@ -247,6 +247,9 @@ p
       box-shadow: 0 2px 9px 0 #00000026
       padding: 28px
 
+      .tippy-content
+         padding: 0
+
       @media (max-width: 1150px)
          white-space: normal
 
@@ -260,16 +263,16 @@ p
          .tippy-content
             padding: 0 60px 0 0
 
-         &[data-placement^=top]>.tippy-arrow:before
+         &[data-placement^=top] > .tippy-arrow:before
             border-top-color: #E1FAFF !important
 
-         &[data-placement^=bottom]>.tippy-arrow:before
+         &[data-placement^=bottom] > .tippy-arrow:before
             border-bottom-color: #E1FAFF !important
 
-         &[data-placement^=left]>.tippy-arrow:before
+         &[data-placement^=left] > .tippy-arrow:before
             border-left-color: #E1FAFF !important
 
-         &[data-placement^=right]>.tippy-arrow:before
+         &[data-placement^=right] > .tippy-arrow:before
             border-right-color: #E1FAFF !important
 
 
