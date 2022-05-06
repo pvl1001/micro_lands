@@ -9,14 +9,18 @@ function Terms( { title, options } ) {
 
    const [ tippyVisible, setTippyVisible ] = useState( [] )
 
-   const isVisible = ( i ) => typeof window !== 'undefined' && window.innerWidth < 1024
-      ? tippyVisible[i] : undefined
+   const isVisible = ( i ) =>
+      typeof window !== 'undefined' && window.matchMedia( "(hover: none)" ).matches
+         ? tippyVisible[i]
+         : undefined
 
    function onVisible( i ) {
-      if ( typeof window !== 'undefined' && window.innerWidth < 1024 ) {
-         const newArr = [ ...tippyVisible ]
-         newArr[i] = !newArr[i]
-         setTippyVisible( newArr )
+      if ( typeof window !== 'undefined' ) {
+         if ( window.matchMedia( "(hover: none)" ).matches ) {
+            const newArr = [ ...tippyVisible ]
+            newArr[i] = !newArr[i]
+            setTippyVisible( newArr )
+         }
       }
    }
 
@@ -31,26 +35,26 @@ function Terms( { title, options } ) {
                   <div className={ s.term__icon }>{ icon }</div>
                   <p className={ s.term__title }>{ title }</p>
                   <p className={ s.term__description }>{ description }</p>
-                  { tippy && <Tippy
-                     { ...tippyAttrs }
-                     maxWidth={ 460 }
-                     visible={ isVisible( i ) }
-                     onClickOutside={ () => onVisible( i ) }
-                     content={ <>
-                        { tippy }
-                        <button
-                           type="button"
-                           className={ s.tippyCloseBtn }
+                  { tippy &&
+                     <Tippy
+                        { ...tippyAttrs }
+                        visible={ isVisible( i ) }
+                        onClickOutside={ () => onVisible( i ) }
+                        content={ <>
+                           { tippy }
+                           <button
+                              type="button"
+                              className="tippy-button"
+                              onClick={ () => onVisible( i ) }
+                           ><CloseIcon/>
+                           </button>
+                        </> }>
+                        <span
+                           className={ s.link }
                            onClick={ () => onVisible( i ) }
-                        ><CloseIcon/>
-                        </button>
-                     </> }>
-                     <span
-                        className={ s.link }
-                        onClick={ () => onVisible( i ) }
-                     >Подробнее
-                     </span>
-                  </Tippy> }
+                        >Подробнее
+                        </span>
+                     </Tippy> }
                </li>
             ) }
          </ul>
