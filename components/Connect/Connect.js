@@ -19,7 +19,7 @@ function Connect( { isHidden, setIsHidden, showModal } ) {
       ? `${ s._ } d-block`
       : s._
 
-   function submitHandler(actions) {
+   function submitHandler( actions ) {
       showModal( { modal: 'orderThx', bool: true } )
       actions.resetForm()
    }
@@ -54,11 +54,9 @@ function Connect( { isHidden, setIsHidden, showModal } ) {
                } }
                validateOnBlur
                validationSchema={ validationSchema }
-               onSubmit={ (values, actions) => {
-                  submitHandler(actions)
-               }  }
+               onSubmit={ ( values, actions ) => submitHandler( actions ) }
             >
-               { ( { values, errors, touched, dirty, handleChange, handleBlur, handleSubmit } ) =>
+               { ( { values, errors, touched, dirty, handleChange, handleBlur, handleSubmit, setFieldValue } ) =>
                   <form className={ s.form } onSubmit={ handleSubmit }>
                      <div className={ s.inputs }>
                         <CustomInput
@@ -71,6 +69,7 @@ function Connect( { isHidden, setIsHidden, showModal } ) {
                            errors={ errors }
                            touched={ touched }
                            dirty={ dirty }
+                           setFieldValue={ setFieldValue }
                         />
                         <CustomInput
                            className={ s.input }
@@ -82,6 +81,7 @@ function Connect( { isHidden, setIsHidden, showModal } ) {
                            errors={ errors }
                            touched={ touched }
                            dirty={ dirty }
+                           setFieldValue={ setFieldValue }
                         />
                      </div>
 
