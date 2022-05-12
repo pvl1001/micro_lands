@@ -6,7 +6,7 @@ import Header from "../components/Header/Header";
 import Connect from "../components/Connect/Connect";
 import OrderBtn from "../components/OrderBtn/OrderBtn";
 import { useEffect, useState } from "react";
-import OrderThx from "../components/_modals/OrderThx/OrderThx";
+import ModalOrderThx from "../components/_modals/OrderThx/ModalOrderThx";
 import TermsBlock from "../components/TermsBlock/TermsBlock";
 import WifiIcon from "../public/svg/wifi.svg";
 import InfinityIcon from "../public/svg/infinity.svg";
@@ -15,6 +15,8 @@ import MessageIcon from "../public/svg/message.svg";
 import RouterIcon from "../public/svg/router.svg";
 import Terms from "../components/Terms/Terms";
 import termsBigStyle from '../components/Terms/TermsBig.module.sass'
+import ModalStart from "../components/_modals/Terms/ModalStart";
+import ModalMftv from "../components/_modals/Terms/ModalMftv";
 
 
 export default function IndexPage() {
@@ -98,7 +100,9 @@ export default function IndexPage() {
 
 
          <ModalCity/>
-         <OrderThx setIsHidden={ setIsHidden }/>
+         <ModalOrderThx setIsHidden={ setIsHidden }/>
+         <ModalStart/>
+         <ModalMftv/>
       </>
    )
 }
