@@ -17,6 +17,7 @@ import Terms from "../components/Terms/Terms";
 import termsBigStyle from '../components/Terms/TermsBig.module.sass'
 import ModalStart from "../components/_modals/Terms/ModalStart";
 import ModalMftv from "../components/_modals/Terms/ModalMftv";
+import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 
 
 export default function IndexPage() {
@@ -81,6 +82,7 @@ export default function IndexPage() {
 
          <div className="wrapper">
             <Nav/>
+            <Breadcrumbs/>
 
             <div className="content">
                <Header/>
