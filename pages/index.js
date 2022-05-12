@@ -8,6 +8,7 @@ import Connect from "../components/Connect/Connect";
 import OrderBtn from "../components/OrderBtn/OrderBtn";
 import { useEffect, useState } from "react";
 import OrderThx from "../components/_modals/OrderThx/OrderThx";
+import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 
 
 export default function IndexPage() {
@@ -29,6 +30,7 @@ export default function IndexPage() {
 
          <div className="wrapper">
             <Nav/>
+            <Breadcrumbs/>
 
             <div className="content">
                <Header/>
