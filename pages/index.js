@@ -15,6 +15,7 @@ import MessageIcon from "../public/svg/message.svg";
 import RouterIcon from "../public/svg/router.svg";
 import Terms from "../components/Terms/Terms";
 import termsBigStyle from '../components/Terms/TermsBig.module.sass'
+import ModalMftv from "../components/_modals/Terms/ModalMftv";
 
 
 export default function IndexPage() {
@@ -105,6 +106,7 @@ export default function IndexPage() {
 
          <ModalCity/>
          <OrderThx setIsHidden={ setIsHidden }/>
+         <ModalMftv/>
       </>
    )
 }

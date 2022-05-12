@@ -1,0 +1,103 @@
+@import 'public/styles/variable'
+
+.modal_dialog
+   max-width: 950px
+
+
+.modal_content
+   padding: 0
+   overflow: hidden
+
+
+.closeIcon
+   path
+      fill: #fff
+
+
+._
+   position: absolute
+   top: 0
+   right: 0
+   bottom: 0
+   left: 0
+   display: flex
+   flex-direction: column
+   justify-content: flex-end
+   padding: 30px 42px
+
+
+.logo
+   margin-bottom: 26px
+   color: $mf-green
+   font-size: 50px
+   font-weight: 700
+   position: relative
+   white-space: nowrap
+
+   span
+      vertical-align: middle
+
+
+.description
+   color: #fff
+   font-size: 20px
+   line-height: 28px
+   letter-spacing: .5px
+   position: relative
+
+
+.video
+   @media (max-width: $mobile)
+      display: none
+
+
+.videoImg
+   display: none
+   height: 100%
+   width: auto
+
+
+.backdrop
+   &:before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .8))
+
+
+@media (max-width: $mobile)
+   .modal_content
+      width: auto
+      height: 458px
+      margin: auto
+
+   ._
+      padding: 30px 24px
+
+
+   .logo span
+      font-size: 27px
+
+
+   .description
+      font-size: 15px
+      line-height: 24px
+      letter-spacing: initial
+
+
+   .videoImg
+      display: initial
+
+
+.mftvImg
+   @media (max-width: $mobile)
+      display: none
+
+
+.modal_content_mftv
+   @media (max-width: $mobile)
+      width: 291px
+      background: url('/img/oscar.webp') center / cover no-repeat
