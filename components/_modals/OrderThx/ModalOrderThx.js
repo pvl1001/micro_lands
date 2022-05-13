@@ -20,7 +20,6 @@ function ModalOrderThx( { show, showModal, setIsHidden } ) {
    return (
       <Modal
          centered
-         animation={ false }
          show={ show }
          onHide={ onHide }
          dialogClassName={ s.modal_dialog }
