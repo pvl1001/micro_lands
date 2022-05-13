@@ -7,6 +7,7 @@
 .modal_content
    padding: 0
    overflow: hidden
+   display: initial
 
 
 .closeIcon
@@ -47,6 +48,14 @@
 
 
 .video
+   display: block
+   width: 100%
+   @media (max-width: $mobile)
+      display: none
+
+
+.mftvImg
+   width: 100%
    @media (max-width: $mobile)
       display: none
 
@@ -90,11 +99,6 @@
 
    .videoImg
       display: initial
-
-
-.mftvImg
-   @media (max-width: $mobile)
-      display: none
 
 
 .modal_content_mftv
