@@ -16,7 +16,7 @@ function Connect( { isHidden, setIsHidden, showModal } ) {
    } )
 
    const isShow = !isHidden
-      ? `${ s._ } d-block`
+      ? `${ s._ } ${ s.show }`
       : s._
 
    function submitHandler( actions ) {
