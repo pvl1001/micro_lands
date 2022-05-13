@@ -112,9 +112,16 @@ a.link
    display: none
 
 
+.container.show
+   visibility: visible
+   opacity: 1
+
+
 @media (max-width: $tablet)
    .container
-      display: none
+      visibility: hidden
+      opacity: 0
+      transition: .2s ease-in
       position: fixed
       top: 50%
       left: $wrapperTablet

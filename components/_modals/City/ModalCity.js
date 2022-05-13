@@ -260,7 +260,6 @@ function ModalCity( props ) {
    return (
       <Modal
          centered
-         animation={ false }
          className={ s.modal }
          dialogClassName={ s.modal_dialog }
          contentClassName={ s.modal_content }
