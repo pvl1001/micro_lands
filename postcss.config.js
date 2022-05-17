@@ -1,5 +1,5 @@
-const glob = require( "glob-all" );
-const paths = require( "react-scripts/config/paths" );
+// const glob = require( "glob-all" );
+// const paths = require( "react-scripts/config/paths" );
 
 
 module.exports = {
@@ -23,10 +23,11 @@ module.exports = {
             content: [
                './pages/**/*.{js,jsx,ts,tsx}',
                './components/**/*.{js,jsx,ts,tsx}',
+               './public/styles/main.sass',
                // node_modules style
-               ...glob.sync( `${ paths.appNodeModules }/tippy.js/**/*.css`, {
-                  nodir: true
-               } )
+               // ...glob.sync( `${ paths.appNodeModules }/tippy.js/**/*.css`, {
+               //    nodir: true
+               // } )
             ],
             defaultExtractor: content => content.match( /[\w-/:]+(?<!:)/g ) || [],
             safelist: [
