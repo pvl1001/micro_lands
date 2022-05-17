@@ -1,4 +1,5 @@
 import '../public/styles/main.sass'
+
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Analytics from "../analytics/Analytics";
