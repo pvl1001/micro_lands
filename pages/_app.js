@@ -1,4 +1,10 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'tippy.js/dist/tippy.css'
+import 'tippy.js/themes/light.css'
+import '../public/fonts/fonts.css'
+import '../public/styles/null.sass'
 import '../public/styles/main.sass'
+
 
 import React, { useEffect } from 'react';
 import Head from 'next/head';
