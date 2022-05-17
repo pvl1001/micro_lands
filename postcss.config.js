@@ -1,5 +1,5 @@
-// const glob = require( "glob-all" );
-// const paths = require( "react-scripts/config/paths" );
+const glob = require( "glob-all" );
+const paths = require( "react-scripts/config/paths" );
 
 
 module.exports = {
@@ -28,6 +28,7 @@ module.exports = {
                //    nodir: true
                // } )
             ],
+            css: ['public/styles/main.sass'],
             defaultExtractor: content => content.match( /[\w-/:]+(?<!:)/g ) || [],
             safelist: { // список исключений
                standard: [
