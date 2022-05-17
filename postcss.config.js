@@ -24,9 +24,9 @@ module.exports = {
                './pages/**/*.{js,jsx,ts,tsx}',
                './components/**/*.{js,jsx,ts,tsx}',
                // node_modules style
-               // ...glob.sync( `${ paths.appNodeModules }/tippy.js/**/*.css`, {
-               //    nodir: true
-               // } )
+               ...glob.sync( `${ paths.appNodeModules }/tippy.js/**/*.css`, {
+                  nodir: true
+               } )
             ],
             css: ['public/styles/main.sass'],
             defaultExtractor: content => content.match( /[\w-/:]+(?<!:)/g ) || [],
