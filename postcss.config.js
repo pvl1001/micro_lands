@@ -1,3 +1,7 @@
+const glob = require( "glob-all" );
+const paths = require( "react-scripts/config/paths" );
+
+
 module.exports = {
    "plugins": [
       "postcss-flexbugs-fixes",
@@ -16,12 +20,15 @@ module.exports = {
       [
          '@fullhuman/postcss-purgecss',
          {
-            content: [ // файлы сравнения селекторов
-               'pages/**/*.{js,jsx}',
-               'components/**/*.{js,jsx}',
+            content: [
+               './pages/**/*.{js,jsx,ts,tsx}',
+               './components/**/*.{js,jsx,ts,tsx}',
             ],
             css: [
-               'public/styles/main.{css,scss,sass}',
+               // node_modules style
+               ...glob.sync( `${ paths.appNodeModules }/tippy.js/**/*.css`, {
+                  nodir: true
+               } )
             ],
             defaultExtractor: content => content.match( /[\w-/:]+(?<!:)/g ) || [],
             safelist: { // список исключений
