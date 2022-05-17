@@ -27,6 +27,7 @@ module.exports = {
                "path",
                "fade",
                /^modal/,
+               /^tippy/,
                '[data-theme~=light]'
             ],
          }
