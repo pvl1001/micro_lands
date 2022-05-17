@@ -1,4 +1,10 @@
-@import 'variable'
+@import 'bootstrap/dist/css/bootstrap.min.css'
+@import 'tippy.js/dist/tippy.css'
+/*! purgecss ignore */
+@import 'tippy.js/themes/light.css'
+@import '../fonts/fonts.css'
+@import './null.sass'
+@import './variable'
 
 html
    display: table
@@ -246,7 +252,9 @@ p
       padding: 24px
 
 
+/* purgecss ignore */
 .tippy-box
+   /* purgecss ignore current */
    &[data-theme~=light]
       border-radius: 0
       font-size: 15px
