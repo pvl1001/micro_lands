@@ -1,3 +1,6 @@
+const glob = require("glob-all");
+const paths = require("react-scripts/config/paths");
+
 module.exports = {
    "plugins": [
       "postcss-flexbugs-fixes",
@@ -19,6 +22,9 @@ module.exports = {
             content: [
                './pages/**/*.{js,jsx,ts,tsx}',
                './components/**/*.{js,jsx,ts,tsx}',
+               ...glob.sync(`${paths.appNodeModules}/tippy.js/**/*.css`, {
+                  nodir: true,
+               })
             ],
             defaultExtractor: content => content.match( /[\w-/:]+(?<!:)/g ) || [],
             safelist: [
