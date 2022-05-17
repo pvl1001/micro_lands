@@ -21,8 +21,8 @@ module.exports = {
          '@fullhuman/postcss-purgecss',
          {
             content: [
-               './pages/**/*.{js,jsx,ts,tsx}',
-               './components/**/*.{js,jsx,ts,tsx}',
+               './pages/**/*.{js,jsx}',
+               './components/**/*.{js,jsx}',
                // node_modules style
                ...glob.sync( `${ paths.appNodeModules }/tippy.js/**/*.css`, {
                   nodir: true
